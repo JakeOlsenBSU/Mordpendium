@@ -1,0 +1,88 @@
+* {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+html,
+body {
+	margin:0px;
+ height: 100%;
+ position: relative;
+   background-color: #d1d1d1;
+}
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+li a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #222;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+@font-face {
+  font-family: 'Starcraft Normal';
+  src:  url('Starcraft Normal.woff2') format('woff2'),
+        url('Starcraft Normal.woff') format('woff'),
+		url('Starcraft Normal.ttf') format('truetype');
+}
+#login {
+	padding: 18px 0px 0px 0px;
+	margin:0px;
+	float:right;
+}
+#header1 {
+  background-color:#000000;
+  overflow: hidden;
+  color:#33FFB4;
+  margin:0px 0px 0px 0px;
+  font-family: 'Starcraft Normal';
+  font-size: 40px;
+  letter-spacing: 5px;
+  padding: 10px 20px 5px 20px;
+}
+#header2 {
+  background-color:#000000;
+  overflow: hidden;
+  color:#33FFB4;
+  margin:0px;
+  font-family: 'Starcraft Normal';
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding: 5px 20px 10px 20px;
+}
+#nav_pane {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color:#444;
+  overflow: hidden;
+  color:#33FFB4;
+  font-family: 'Starcraft Normal';
+  font-size: 20px;
+  letter-spacing: 3px;
+}
