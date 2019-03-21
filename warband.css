@@ -34,11 +34,13 @@ td {
 #main_stats{
   margin: 20px 0px 20px 5px;
 }
-span {
+#xpspan {
   margin: 10px 0px;
   float:left;
 }
 #skills{
+	margin: 10px 0px;
+  float:left;
   max-width:170px;
   font-size:12px;
 }
