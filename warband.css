@@ -14,7 +14,7 @@ td {
 }
 #xp {
   float:right;
-  margin: 0px 20px 0px 0px;
+  margin: 0px 5px 0px 0px;
 }
 .stat_font{
   font-family:'Exocet Light';
@@ -59,9 +59,10 @@ span {
   height: 150px; 
 }
 .flex-container {
+  background-color: white;
   float:left;
   font-family: 'Exocet Light';
-  width:270px;
+  min-width:250px;
   margin: 20px 0px;
   border-radius: 7px;
   border: 2px solid #000;
