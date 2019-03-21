@@ -7,7 +7,7 @@
 }
 html,
 body {
-	margin:0px;
+ margin:0px;
  height: 100%;
  position: relative;
    background-color: #d1d1d1;
@@ -20,7 +20,11 @@ body {
  padding-bottom: 100px; /* height of your footer */
 }
 footer {
+	  background-color:#777;
+	  margin:0px;
+		padding: 0px;
   position: absolute;
+  height:35px;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -85,4 +89,23 @@ a:visited {
   font-family: 'Starcraft Normal';
   font-size: 20px;
   letter-spacing: 3px;
+}
+.leftcolumn { 
+  padding-left: 20px;
+  float: left;
+  width: 70%;
+}
+.rightcolumn {
+  float: right;
+  width: 20%;
+  padding-right: 20px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.bold_bigger {
+  font-size:20px;
+  font-weight: bold;
 }
