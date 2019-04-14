@@ -8,13 +8,47 @@ td {
   text-align:center;
   border: 1px solid black;
 }
-
+textarea {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  resize: none;
+}
 #stat_header {
   font-size:10px;
+}
+#spaceDIV{
+	height:75px;
+	width:100%;
 }
 #xp {
   float:right;
   margin: 0px 5px 0px 0px;
+}
+#deletebutton {
+	position:relative;
+	top:-30px;
+	right: -60px;
+	padding:4px;
+	float:right;
+}
+#updatebutton {
+	position:relative;
+	top:30px;
+	right: -110px;
+	padding:3px;
+	float:right;
+}
+#hiddenfield{
+	display:none;
+}
+#deleteUnitSubmit{
+	position:relative;
+	top:40px;
+}
+#updateUnitSubmit{
+	position:relative;
+	top:40px;
 }
 .stat_font{
   font-family:'Exocet Light';
@@ -40,9 +74,19 @@ td {
 }
 #skills{
 	margin: 10px 0px;
-  float:left;
-  max-width:170px;
-  font-size:12px;
+	float:left;
+	max-width:170px;
+	font-size:12px;
+}
+.inputStat {
+	width:30px;
+}
+.inputEXP {
+	width:40px;
+}
+.nobounds {
+	margin:0px;
+	padding:0px;
 }
 .large_bold {
   font-family:'Exocet Heavy';
@@ -64,12 +108,22 @@ td {
   background-color: white;
   float:left;
   font-family: 'Exocet Light';
+  width:250px;
+  margin: 20px 0px;
+  border-radius: 7px;
+  border: 2px solid #000;
+  height: 165px; 
+}
+.create_flex_container {
+	position:relative;
+  background-color: white;
+  float:left;
+  font-family: 'Exocet Light';
   min-width:250px;
   margin: 20px 0px;
   border-radius: 7px;
   border: 2px solid #000;
-  height: 150px; 
-  
+  height: 180px; 
 }
 .base_stats {
   float:left;
@@ -79,7 +133,10 @@ td {
   font-family: 'Exocet Light';
   border-right: 2px solid black;
 }
-
+#unitRow{
+	width:840px;
+	border: 0px;
+}
 @font-face {
   font-family: 'Exocet Heavy';
   src:  url('Exocet Heavy.woff2') format('woff2'),

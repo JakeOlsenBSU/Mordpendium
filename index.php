@@ -8,37 +8,73 @@ session_start();
 	<link rel="icon" href="favi.png" type="image/gif" sizes="16x16">
 </head>
 
-	<span id="headspan">
-	<h1 id="header1">
-	MORDPENDIUM
-	</h1>
-	<h2 id="header2">
-	Mordheim Warband Builder
-	</h2>
-	</span>
+	<div id="banner">
+		<span id="headspan">
+			<h1 id="header1">
+				MORDPENDIUM
+			</h1>
+			<h2 id="header2">
+				Mordheim Warband Builder
+			</h2>
+		</span>
+		<?php
+			if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+				echo"<span id=\"loginbox\" class=\"hide\">";
+			} else {
+				echo"<span id=\"loginbox\">";
+			}
+		?>
+		
+			<form method="post" action="login_handler.php">
+				<div class="inputbox" ><input name="username" type="text" placeholder="Username"></div>
+				<div class="inputbox" ><input name="password" type="password" placeholder="Password"></div>
+				<div>
+					<input id="loginbutton" type="submit" value="Login">
+				</div>
+			</form>
+			<form action="create.php">
+				<input id="createbutton" type="submit" value="Create">
+			</form>
+		</span>
+		<?php
+			if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+				echo"<span id=\"warbandbox\">";
+			} else {
+				echo"<span id=\"warbandbox\" class=\"hide\">";
+			}
+		?>
+			<form action="profile.php">
+				<input id="profilebutton" type="submit" value="Edit Profile">
+			</form>
+			<form action="createUnit.php">
+				<input id="createUnitbutton" type="submit" value="Create Unit">
+			</form>
+			<form action="logout_handler.php">
+				<input id="logoutbutton" type="submit" value="Logout">
+			</form>
+		</span>
+	</div>
   
-	<span id="loginbox">
-	<form>
-		<input type="text" value="username">
-	</form>
-	<form>
-		<input type="password" value="Password">
-	</form>
-	<form id = "submitlogin">
-		<input type="button" value="Login">
-	</form>
-	</span>
-  
-  <ul id="nav_pane">
-	<li><a href="index.php">Home</a></li>
-	<li><a href="forum.html">Forum</a></li>
-	<li><a href="warbands.php">Warbands</a></li>
-	<li><a href="rules.html">Rules</a></li>
-  </ul>
+	<ul id="nav_pane">
+		<li><a href="index.php">Home</a></li>
+		<li><a href="warbands.php">Warbands</a></li>
+	</ul>
   
   <body>
     <div class="main-container">
     <div class="leftcolumn">
+		<div class="card">
+        <h2>HW6 Grading help</h2>
+        <h5>Title description, Apr 13, 2019</h5>
+        <p>Since you would have to know whats going on in this game to effectively create a warrior, I have created a test account with a premade warband. Username:test Password:guest</p>
+		<h3> Username:test </h3>
+		<h4> Password:guest </h4>
+      </div>
+	  	<div class="card">
+        <h2>HW6 Grading help</h2>
+        <h5>Title description, Apr 13, 2019</h5>
+        <p>Trimmed down my sites futured planned content areas.  Main features are this Home Section that still needs work, but is a place for admins to post news on upcoming games, and Leading Warbands. Then the warbands area is the main reason for this site, including the spot to build and develop a Mordheim Warband.</p>
+      </div>
       <div class="card">
         <h2>Border Town Burning</h2>
         <h5>Title description, Dec 12, 2018</h5>
@@ -76,18 +112,11 @@ session_start();
 		</ol>
 		</div>
       </div>
-      <div class="card">
-        <h3>New Post</h3>
-        <p>None Exist yet..</p>
-      </div>
-      <div class="card">
-        <h3>Links</h3>
-        <p>Some text..</p>
-      </div>
+
     </div>
 
 	<footer>
-      <p class="text-center">this is a footer</p>
+		<p class="text-center">2019 Razed Tech ALL RIGHTS RESERVED auradeft@gmail.com</p>
     </footer>
 	</div>
   </body>
