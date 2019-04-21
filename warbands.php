@@ -1,4 +1,5 @@
 <?php
+$thisPage ="warbands";
 session_start();
 include("Unit.php");
 ?>
@@ -8,6 +9,9 @@ include("Unit.php");
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="warband.css">
 	<link rel="icon" href="favi.png" type="image/gif" sizes="16x16">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/charm.js"></script>
+	<script src="js/dead.js"></script>
 </head>
 
 	<div id="banner">
@@ -58,10 +62,14 @@ include("Unit.php");
 	</div>
 	
 	
-	<ul id="nav_pane">
-		<li><a href="index.php">Home</a></li>
-		<li><a href="warbands.php">Warbands</a></li>
-	</ul>
+	<div id="navigation">
+		<ul>
+			<li<?php if ($thisPage=="index") 
+				echo " id=\"currentpage\""; ?>><a href="index.php">Home</a></li>
+			<li<?php if ($thisPage=="warbands") 
+				echo " id=\"currentpage\""; ?>><a href="warbands.php">Warbands</a></li>
+		</ul>
+	</div>
 	
     <div>
 	</div>
@@ -175,6 +183,13 @@ include("Unit.php");
 				<input id='hiddenfield' name='updateUnitID' type='text' value=" . $unit['0']['0'] . ">
 				<input id='updatebutton' type='submit' value='Update'>
 			</form></div>";
+			
+			echo "<div>
+				<input class='luckButton' type='button' value='Charm'>
+			</div>";
+			echo "<div>
+				<input class='deadButton' type='button' value='Dead'>
+			</div>";
 			echo "</tr></td>";
 			echo "</div>";
 		}

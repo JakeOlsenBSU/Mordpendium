@@ -27,14 +27,14 @@ textarea {
 }
 #deletebutton {
 	position:relative;
-	top:-30px;
+	top:-50px;
 	right: -60px;
 	padding:4px;
 	float:right;
 }
 #updatebutton {
 	position:relative;
-	top:30px;
+	top:-5px;
 	right: -110px;
 	padding:3px;
 	float:right;
@@ -77,6 +77,36 @@ textarea {
 	float:left;
 	max-width:170px;
 	font-size:12px;
+}
+.luckButton {
+	position:relative;
+	top:40px;
+	right: -160px;
+	padding:4px;
+	float:right;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.deadButton {
+	position:relative;
+	top:80px;
+	right: -200px;
+	padding:4px;
+	float:right;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.red {
+	background-color: red;
+	color:white;
+}
+.blue {
+	background-color: blue;
+	color:white;
 }
 .inputStat {
 	width:30px;

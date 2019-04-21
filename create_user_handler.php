@@ -22,8 +22,9 @@ if (!$valid) {
     exit();
 }
 require_once 'Dao.php';
+$hashpass = hash('sha256', $password1);
 $dao = new Dao();
-$dao->createUser ($username, $email, $password1);
+$dao->createUser ($username, $email, $hashpass);
 header("Location: warbands.php");
 exit;
 ?>

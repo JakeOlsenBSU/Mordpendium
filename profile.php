@@ -1,4 +1,5 @@
 <?php
+$thisPage="";
 session_start();
 require_once 'Dao.php';
 $dao = new Dao();
@@ -59,10 +60,14 @@ $userArray = $dao->getUserEmail($_SESSION['loginname']);
 	</div>
 	
 	
-	<ul id="nav_pane">
-		<li><a href="index.php">Home</a></li>
-		<li><a href="warbands.php">Warbands</a></li>
-	</ul>
+	<div id="navigation">
+		<ul>
+			<li<?php if ($thisPage=="index") 
+				echo " id=\"currentpage\""; ?>><a href="index.php">Home</a></li>
+			<li<?php if ($thisPage=="warbands") 
+				echo " id=\"currentpage\""; ?>><a href="warbands.php">Warbands</a></li>
+		</ul>
+	</div>
 	
 	
     <div>

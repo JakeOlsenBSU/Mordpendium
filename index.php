@@ -1,4 +1,5 @@
 <?php
+$thisPage="index";
 session_start();
 ?>
 
@@ -55,14 +56,25 @@ session_start();
 		</span>
 	</div>
   
-	<ul id="nav_pane">
-		<li><a href="index.php">Home</a></li>
-		<li><a href="warbands.php">Warbands</a></li>
-	</ul>
+	<div id="navigation">
+		<ul>
+			<li<?php if ($thisPage=="index") 
+				echo " id=\"currentpage\""; ?>><a href="index.php">Home</a></li>
+			<li<?php if ($thisPage=="warbands") 
+				echo " id=\"currentpage\""; ?>><a href="warbands.php">Warbands</a></li>
+		</ul>
+	</div>
   
   <body>
     <div class="main-container">
     <div class="leftcolumn">
+		<div class="card">
+        <h2>Hash Purge</h2>
+        <h5>Apr 21, 2019</h5>
+        <p>Everything was reset in order to make it more secure, if you made an account, do it again.</p>
+		<h3> Username:test </h3>
+		<h4> Password:guest </h4>
+      </div>
 		<div class="card">
         <h2>HW6 Grading help</h2>
         <h5>Title description, Apr 13, 2019</h5>
@@ -110,6 +122,16 @@ session_start();
 			<li><span class="bold_bigger">254</span> - Mikes Monkey Monks</li>
 			<li><span class="bold_bigger">205</span> - The Purge</li>
 		</ol>
+		</div>
+      </div>
+	  	        <div class="card">
+	          <h2>Links</h2>
+		<div>
+        <ul id='linksList'>
+		  	<li><a href="https://www.dragonclawforge.com/">Claw Forge</a></li>
+			<li><a href="http://broheim.net/">Broheim</a></li>
+			<li><a href="https://drive.google.com/open?id=0B9y94d4M-MYUWVQzb21xdG16M3c">Mordheim Drive</a></li>
+		</ul>
 		</div>
       </div>
 
